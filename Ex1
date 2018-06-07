@@ -1,0 +1,14 @@
+i=int(input())
+pal={}
+cont=0
+for _ in range(i):
+    p,q=input().split()
+    pal[p]=q
+frase=input().split()
+for z in frase:
+    for x in pal:
+        if z==x:
+            print(pal[x],end=" ")
+            cont=1
+if not(cont):
+    print("Tudo Bem!")
