@@ -1,0 +1,11 @@
+i=int(input())
+mar={}
+for _ in range(i):
+    p=input().split()
+    q=p[0]
+    del(p[0])
+    mar[q]=p
+print(len(mar))
+for i in mar:
+    for t in mar[i]:
+        print (t,end=" ")
