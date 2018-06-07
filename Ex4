@@ -1,0 +1,19 @@
+i=int(input())
+loc={"S":0,"N":0,"O":0,"L":0}
+for _ in range(i):
+    p,q=input().split()
+    q=int(q)
+    loc[p]+=q
+for t in loc:
+    if t=="N":
+        q=loc[t]-loc["S"]
+    elif t=="S":
+        q=loc[t]-loc["N"]
+    elif t=="L":
+        q=loc[t]-loc["O"]
+    elif t=="O":
+        q=loc[t]-loc["L"]       
+    if q<0:
+         print("0",end=" ")
+    else:
+        print(q,end=" ")
