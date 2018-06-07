@@ -1,0 +1,12 @@
+i=int(input())
+bolas={}
+for _ in range(i):
+    p=input().split()
+    q=int(p[-1])
+    del(p[0],p[-1])
+    bolas[q]=p
+for _ in range(i):
+    t=max(bolas)
+    for z in bolas[t]:
+        print(z,end="")
+    del(bolas[t])
